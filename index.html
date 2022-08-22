@@ -1,7 +1,7 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" ng-app="LunchCheck">
   <head>
-    <title>Lunch Checker</title>
+    <title>Lunch Check</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles/bootstrap.min.css">
     <style>
@@ -9,21 +9,24 @@
     </style>
   </head>
 <body>
-   <div class="container">
+   <div ng-controller="LunchCheckController" class="container">
      <h1>Lunch Checker</h1>
-
+     <br>
+     <h3>How many lunch items do you have today? No more than 3 is required.</h3>
          <div class="form-group">
-             <input id="lunch-menu" type="text"
-             placeholder="list comma separated dishes you usually have for lunch"
-             class="form-control">
+             <input id="lunch-menu" type="text" ng-model="eatables"
+             placeholder="Lunch Items"
+             class="form-control"
+             >
          </div>
          <div class="form-group">
-             <button class="btn btn-default">Check If Too Much</button>
+             <button class="btn btn-default" ng-click="tackle()">Check If Too Much</button>
          </div>
          <div class="form-group message">
-           <!-- Your message can go here. -->
+           {{message}}
          </div>
    </div>
-
+   <script src="angular.min.js"></script>
+   <script src="app.js"></script>
 </body>
 </html>
