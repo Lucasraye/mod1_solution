@@ -12,14 +12,14 @@
             $scope.tackle = function () {
                 console.log("got eatables = " + $scope.eatables);
                 if ($scope.eatables == null || $scope.eatables == "") {
-                    $scope.message = "Please Enter Data First!!";
+                    $scope.message = "Please Enter Data First";
                 } else {
                     var res = $scope.eatables.split(",");
                     console.log("Got array length = " + res.length);
                     if (res.length <= 3) {
-                        $scope.message = "Enjoy!!";
+                        $scope.message = "Enjoy";
                     } else {
-                        $scope.message = "Too Much!!";
+                        $scope.message = "Too Much";
                 }
                 
              }
